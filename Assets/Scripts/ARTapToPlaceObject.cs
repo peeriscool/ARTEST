@@ -15,17 +15,17 @@ public class ARTapToPlaceObject : MonoBehaviour
     private List<ARRaycastHit> currentrays;
     int count = 0;
 
-    PhoneDebuger log;
+    public PhoneDebuger log;
     void Start()
     {
         ArRaycastManager = FindObjectOfType<ARRaycastManager>();
         arOrigin = FindObjectOfType<ARSessionOrigin>();
-        log = FindObjectOfType<PhoneDebuger>();
+      //  log = FindObjectOfType<PhoneDebuger>();
     }
 
     void Update()
     {
-      //  UpdatePlacementPose();
+        UpdatePlacementPose();
         UpdatePlacementPoseIndicator();
     }
 
@@ -40,6 +40,7 @@ public class ARTapToPlaceObject : MonoBehaviour
       else
         {
             placementIdicator.SetActive(false);
+            log.Pushmessage(PlacemnetPoseIsValid.ToString());
         }
         
     }
@@ -48,7 +49,7 @@ public class ARTapToPlaceObject : MonoBehaviour
     {
         var screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));
         var hits = new List<ARRaycastHit>();
-        ArRaycastManager.Raycast(screenCenter,hits,UnityEngine.XR.ARSubsystems.TrackableType.Planes);
+        ArRaycastManager.Raycast(screenCenter,hits, UnityEngine.XR.ARSubsystems.TrackableType.FeaturePoint); //UnityEngine.XR.ARSubsystems.TrackableType.Planes
 
 
         PlacemnetPoseIsValid = hits.Count > count;
@@ -60,8 +61,10 @@ public class ARTapToPlaceObject : MonoBehaviour
     }
     public void Buttonpress()
     {
+        log.Pushmessage("viable raycast hits are: ");
         log.Pushmessage(currentrays.Count.ToString());
         if(count < currentrays.Count)
         count++;
+        log.Pushmessage("Current" + count.ToString());
     }
 }

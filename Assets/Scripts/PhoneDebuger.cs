@@ -11,7 +11,7 @@ public class PhoneDebuger : MonoBehaviour
     void Start()
     {
         Logger = GetComponent<Text>();
-        ClearLog();
+      //  ClearLog();
     }
 
     // Update is called once per frame

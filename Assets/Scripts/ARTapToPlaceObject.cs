@@ -51,11 +51,11 @@ public class ARTapToPlaceObject : MonoBehaviour
         var hits = new List<ARRaycastHit>();
         ArRaycastManager.Raycast(screenCenter,hits, UnityEngine.XR.ARSubsystems.TrackableType.FeaturePoint); //UnityEngine.XR.ARSubsystems.TrackableType.Planes
 
-
+        currentrays = hits;
         PlacemnetPoseIsValid = hits.Count > count;
         if(PlacemnetPoseIsValid) //update center raycast
         {
-            currentrays = hits;
+            
             placementPose = hits[0].pose;
         }
     }

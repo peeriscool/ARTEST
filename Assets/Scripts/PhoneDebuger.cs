@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PhoneDebuger : MonoBehaviour
 {
-
+    int Time = 0;
     Text Logger;
     // Start is called before the first frame update
     void Start()
@@ -22,5 +22,16 @@ public class PhoneDebuger : MonoBehaviour
     public void ClearLog()
     {
         Logger.text = "";
+    }
+
+    private void FixedUpdate()
+    {
+        Time++;
+        if(Time > 60)
+        {
+            Pushmessage(GameObject.Find("AR Camera").transform.position.ToString() );
+            Time = 0;
+            Debug.Log("Location");
+        }
     }
 }

@@ -7,17 +7,19 @@ public class MoveFloor : MonoBehaviour
 { 
     GameObject Moveable;
     int Time = 1;
+    Vector3 resetpos = new Vector3(-260,0,0);
     void Start()
     {
         Moveable = this.gameObject;
     }
 
-    // Update is called once per frame
-    void fixedUpdate()
+    private void FixedUpdate()
     {
-     
-        Moveable.GetComponent<Rigidbody>().AddForce(new Vector3(10,0,0), ForceMode.Acceleration);
-        Moveable.transform.position += new Vector3(1,0,0);
-       
+        //Moveable.GetComponent<Rigidbody>().AddForce(new Vector3(10, 0, 0), ForceMode.Acceleration);
+        Moveable.transform.position -= new Vector3(0.1f, 0, 0);
+        if(Moveable.transform.position.x < resetpos.x)
+        {
+            Moveable.transform.position = new Vector3(-166, 0.6f, -0.7f);
+        }
     }
 }

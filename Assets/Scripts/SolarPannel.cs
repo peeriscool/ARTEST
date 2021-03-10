@@ -5,25 +5,27 @@ using UnityEngine;
 public class SolarPannel : MonoBehaviour
 {
     int Time = 0;
+    int spawns = 0;
     public GameObject Panel;
-    List<GameObject> Panels;
-    // Start is called before the first frame update
+    List<GameObject> Panels = new List<GameObject>();
     void Start()
     {
         
     }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         Time++;
         if (Time > 120)
         {
-            GameObject.Instantiate(Panel);
-            Panels.Add(Panel);
-            Panel.transform.position = new Vector3(Random.value*3,0, Random.value*3);
+            GameObject Instance =  GameObject.Instantiate(Panel);
+            Panels.Add(Instance);
+            Instance.transform.position = new Vector3(Random.value*3,0, Random.value*3);
             Time = 0;
-            Debug.Log("Location");
+            spawns += 1;
+            Debug.Log("Location is: " + Instance.transform.position.ToString());
+            Instance.AddComponent<BoxCollider>();
+            SolarObject Solarscript = Instance.AddComponent<SolarObject>();
+
         }
        
     }
@@ -33,7 +35,8 @@ public class SolarPannel : MonoBehaviour
 public class SolarObject : MonoBehaviour
 {
     BoxCollider bx;
-
+    int liveTime = 5;
+   
     void Start()
     {
         bx = GetComponent<BoxCollider>();
@@ -45,6 +48,6 @@ public class SolarObject : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
-       
+        Destroy(this.gameObject, 1f);
     }
 }

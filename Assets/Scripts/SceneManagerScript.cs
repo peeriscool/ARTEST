@@ -17,7 +17,7 @@ public class SceneManagerScript : MonoBehaviour
 
    public void LoadScene(int load)
     {
-        SceneManager.LoadScene(load, LoadSceneMode.Additive);
+        SceneManager.LoadScene(load, LoadSceneMode.Single);
     }
     public void HideCanvas(Canvas hide)
     {

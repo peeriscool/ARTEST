@@ -293,6 +293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Movable: {fileID: 1849496250}
+  X_axis: 0
+  Y_axis: 0
 --- !u!1 &112880427
 GameObject:
   m_ObjectHideFlags: 0
@@ -6750,17 +6752,17 @@ PrefabInstance:
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.00026736
       objectReference: {fileID: 0}
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.56
+      value: -0.54962
       objectReference: {fileID: 0}
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.1
+      value: -5.1133
       objectReference: {fileID: 0}
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
@@ -6805,17 +6807,17 @@ PrefabInstance:
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.45521
+      value: 0.059650723
       objectReference: {fileID: 0}
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.45521
+      value: 0.059650723
       objectReference: {fileID: 0}
     - target: {fileID: 7594422425958639872, guid: 6edd3f75bcee0094184b974bc125bea8,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.45521
+      value: 0.059650723
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6edd3f75bcee0094184b974bc125bea8, type: 3}

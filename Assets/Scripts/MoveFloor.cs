@@ -7,7 +7,7 @@ public class MoveFloor : MonoBehaviour
 { 
     GameObject Moveable;
     int Time = 1;
-    Vector3 resetpos = new Vector3(-260,0,0);
+    Vector3 resetpos = new Vector3(-200,0,0);
     void Start()
     {
         Moveable = this.gameObject;
@@ -19,7 +19,7 @@ public class MoveFloor : MonoBehaviour
         Moveable.transform.position -= new Vector3(0.1f, 0, 0);
         if(Moveable.transform.position.x < resetpos.x)
         {
-            Moveable.transform.position = new Vector3(-166, 0.6f, -0.7f);
+            Moveable.transform.position = new Vector3(-166.7f, 0.6f, -0.7f);
         }
     }
 }

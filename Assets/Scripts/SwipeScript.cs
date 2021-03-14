@@ -9,18 +9,15 @@ public class SwipeScript : MonoBehaviour
     bool reset = false;
     [Range(0.05f, 1f)]
     public float Throwforce = 0.3f;
-    Vector3 startpos;
-    private void Start()
-    {
-        startpos = this.gameObject.transform.position;
-    }
+    public GameObject startpos;
+
     void Update()
     {
         if(Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began && reset == false)
-        {
-            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        {  
             TouchTimestart = Time.time;
             startPos = Input.GetTouch(0).position;
+            reset = true;
         }
         if(Input.touchCount> 0 && Input.GetTouch(0).phase == TouchPhase.Ended)
         {
@@ -31,17 +28,25 @@ public class SwipeScript : MonoBehaviour
             endPos = Input.GetTouch(0).position;
 
             Direction = startPos - endPos;
-
+            this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+            //TODO make vector 3 for direction 
             GetComponent<Rigidbody>().AddForce(-Direction/Timeinterval * Throwforce);
-            reset = true;
-            resetbool();
+
+            StartCoroutine(resetbool());
+        }
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+           StartCoroutine(resetbool());
+            
         }
     }
     IEnumerator resetbool()
     {
-        yield return new WaitForSeconds(4f);
+       // GameObject.Find("PhoneDebugger").GetComponent<PhoneDebuger>().SendMessage("Reset bool");
+        yield return new WaitForSeconds(5f);
         this.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
-        this.gameObject.transform.position = startpos;
+        this.gameObject.transform.position = startpos.transform.position;
         reset = false;
+        Debug.Log("respawn");
     }
 }

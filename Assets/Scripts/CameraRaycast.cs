@@ -29,7 +29,18 @@ public class CameraRaycast : MonoBehaviour
             Debug.Log("Did Hit");
             if(hit.transform.tag == "ArClickable" )
             {
-                levelselctions[0].enabled = true;
+                if(hit.transform.name == "Energybots_Wind")
+                {
+                    levelselctions[1].enabled = true;
+                }
+                if (hit.transform.name == "Energybots_solarpanel")
+                {
+                    levelselctions[0].enabled = true;
+                }
+                //else
+                //{ 
+                //levelselctions[0].enabled = true;
+                //}
             }
         }
         else

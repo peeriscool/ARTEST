@@ -31,7 +31,7 @@ public class PhoneDebuger : MonoBehaviour
         {
             Pushmessage(GameObject.Find("AR Camera").transform.position.ToString() );
             Time = 0;
-            Debug.Log("Location");
+           // Debug.Log("Location");
         }
     }
 }

@@ -6,7 +6,7 @@ public class CursorScript : MonoBehaviour
 {
     bool levelplaced = false;
     public GameObject CameraOrigin;
-    public GameObject LevelPrefab;
+    public GameObject objectprefab;
     void Start()
     {
         
@@ -31,14 +31,14 @@ public class CursorScript : MonoBehaviour
         //else
         //{
             Debug.DrawRay(CameraOrigin.transform.position, Vector2.one, Color.red, 5f);
-            GameObject locationindicator = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            GameObject locationindicator = GameObject.Instantiate(objectprefab);
             locationindicator.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
-            locationindicator.transform.position = CameraOrigin.transform.position;
+            locationindicator.transform.position = CameraOrigin.transform.position + new Vector3(0f, 0f, 0.2f);
             locationindicator.transform.rotation = CameraOrigin.transform.rotation;
-            locationindicator.AddComponent<BoxCollider>();
-            locationindicator.AddComponent<Rigidbody>().AddForce(locationindicator.transform.forward *2, ForceMode.VelocityChange);
-            
-            Debug.Log("Click");
+           // locationindicator.AddComponent<BoxCollider>();
+           // locationindicator.AddComponent<Rigidbody>().AddForce(locationindicator.transform.forward *12);
+            locationindicator.GetComponent<Rigidbody>().AddForce(locationindicator.transform.forward * 100);
+        Debug.Log("Click");
        // }
     }
 }

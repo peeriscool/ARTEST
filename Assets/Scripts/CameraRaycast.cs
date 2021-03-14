@@ -37,6 +37,10 @@ public class CameraRaycast : MonoBehaviour
                 {
                     levelselctions[0].enabled = true;
                 }
+                if(hit.transform.name == "Energybots_Coal")
+                {
+                    levelselctions[2].enabled = true;
+                }
                 //else
                 //{ 
                 //levelselctions[0].enabled = true;

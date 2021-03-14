@@ -49,13 +49,13 @@ public class ControlObjects : MonoBehaviour
         if (control.value > 0.5f)
         {
            // log.Pushmessage("Right slider");
-            Movable.transform.Rotate(0,1,0,Space.Self);
+            Movable.transform.Rotate(0,2,0,Space.Self);
             control.value = 0.5f;
         }
         if (control.value < 0.5f)
         {
           //  log.Pushmessage("Left slider");
-            Movable.transform.Rotate(0, -1, 0, Space.Self);
+            Movable.transform.Rotate(0, -2, 0, Space.Self);
             control.value = 0.5f;
         }
     }

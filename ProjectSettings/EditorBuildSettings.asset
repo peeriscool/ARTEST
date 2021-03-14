@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 60f19d55443c9404fa8b0ffee9d1674b
   - enabled: 1
-    path: Assets/Scenes/Modelplacing.unity
+    path: Assets/Scenes/SolarMiniGame.unity
     guid: 82b6932df906dec40bd4260ca4c69c95
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/WindMinigame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 21d44c2d211caac4b8f49624ecd4ce34,

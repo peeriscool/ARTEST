@@ -8,6 +8,7 @@ public class SolarPannel : MonoBehaviour
     int spawns = 0;
     public GameObject Panel;
     List<GameObject> Panels = new List<GameObject>();
+    public GameObject camerapos;
     void Start()
     {
         
@@ -19,7 +20,7 @@ public class SolarPannel : MonoBehaviour
         {
             GameObject Instance =  GameObject.Instantiate(Panel);
             Panels.Add(Instance);
-            Instance.transform.position = new Vector3(Random.value*3,0, Random.value*3);
+            Instance.transform.position = new Vector3(Random.value,-2, Random.value) + camerapos.transform.position;
             Time = 0;
             spawns += 1;
             Debug.Log("Location is: " + Instance.transform.position.ToString());

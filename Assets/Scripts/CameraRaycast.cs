@@ -36,6 +36,10 @@ public class CameraRaycast : MonoBehaviour
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 1000, Color.white);
             Debug.Log("Did not Hit");
+            for (int i = 0; i < levelselctions.Count; i++)
+            {
+                levelselctions[i].enabled = false;
+            }
         }
     }
 }

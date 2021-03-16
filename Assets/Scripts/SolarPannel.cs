@@ -49,6 +49,7 @@ public class SolarObject : MonoBehaviour
         {
             Debug.DrawRay(contact.point, contact.normal, Color.white);
         }
+        Gamemanager.Score.Add(10);
         Destroy(this.gameObject, 1f);
     }
 }

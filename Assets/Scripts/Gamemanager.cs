@@ -116,7 +116,7 @@ public class Gamemanager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            
+            pointsystem.WriteToJson(Score);
             EndGame = true;
         }
     }

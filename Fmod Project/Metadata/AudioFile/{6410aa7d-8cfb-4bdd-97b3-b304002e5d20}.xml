@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{6410aa7d-8cfb-4bdd-97b3-b304002e5d20}">
+		<property name="assetPath">
+			<value>Hub_Nuclear_Trumpet_Final.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>97.5</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{56685ea8-eabb-480d-a0fb-9febb01ceccb}</destination>
+		</relationship>
+	</object>
+</objects>

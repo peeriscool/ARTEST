@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 533560525}
   - component: {fileID: 533560524}
   - component: {fileID: 533560523}
+  - component: {fileID: 533560526}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -539,12 +540,13 @@ AudioSource:
   m_GameObject: {fileID: 533560522}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9989c896e6cfe3e4cb2fd771d36e3b0a, type: 3}
+  OutputAudioMixerGroup: {fileID: -6216416844011864183, guid: 85fec134b2fd0ce4d88a70fcd6557427,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 5af9631f5183d864b836d25e2ce531a4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -633,7 +635,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 533560522}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &533560525
 Transform:
   m_ObjectHideFlags: 0
@@ -648,6 +650,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533560526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533560522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225bb1a313853314abd72c24f0f21dff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &592379200
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1824,6 +1838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a5afce834066d40b4467420b0d04cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  duration: 0
+  targetVolume: 0
+  audioMixer: {fileID: 0}
   SceneIndex: 2
 --- !u!54 &1844113826
 Rigidbody:
@@ -2200,7 +2217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a5afce834066d40b4467420b0d04cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneIndex: 2
+  duration: 4000
+  targetVolume: 0
+  audioMixer: {fileID: 24100000, guid: 85fec134b2fd0ce4d88a70fcd6557427, type: 2}
+  SceneIndex: 3
 --- !u!65 &2098602697
 BoxCollider:
   m_ObjectHideFlags: 0

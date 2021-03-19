@@ -209,8 +209,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 52800371}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_LocalPosition: {x: 0, y: 0, z: 283}
+  m_LocalScale: {x: 17.132, y: 20, z: 55.098244}
   m_Children:
   - {fileID: 369509570}
   - {fileID: 772976808}
@@ -527,7 +527,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.35124e-40, z: 0, w: 9.403955e-38}
+  m_BoundingSphereOverride: {x: 8.34e-43, y: 2, z: 2.3509887e-38, w: 4.324333}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -539,7 +539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 519, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -732,8 +732,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 78.1
+  far clip plane: 2080.9
+  field of view: 24
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -758,13 +758,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.67783964, y: -0, z: -0, w: 0.7352098}
-  m_LocalPosition: {x: 0, y: 290.8, z: -28}
+  m_LocalRotation: {x: 0.27481776, y: 0.000000007159074, z: 0.000000015831906, w: 0.96149635}
+  m_LocalPosition: {x: 0, y: 596, z: -727}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 85.350006, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 31.902002, y: 0, z: 0}
 --- !u!82 &963194229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1090,8 +1090,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1314199774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 283}
+  m_LocalScale: {x: 0.8566, y: 1, z: 2.7549124}
   m_Children:
   - {fileID: 1246813414}
   - {fileID: 133953348}

@@ -10,10 +10,13 @@ public class HubScript : MonoBehaviour
     void Start()
     {
         // jsonUtility.FromJson<TileItems>(File.ReadAllText(Application.persistentDataPath + "/MyGame.json"));
-        container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
-        float score = 0;
-        foreach(float i in a.data) { Debug.Log(i); score += i; }
-        displayscore.text = "Energypoints: " + score.ToString();
+        if(System.IO.File.Exists("Leveldata.json"))
+        {
+            container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
+            float score = 0;
+            foreach (float i in a.data) { Debug.Log(i); score += i; }
+            displayscore.text = "Energypoints: " + score.ToString();
+        }
     }
 
     // Update is called once per frame

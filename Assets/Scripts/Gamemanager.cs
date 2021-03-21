@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FMODUnity;
 
 public class Gamemanager : MonoBehaviour
 {
@@ -11,10 +12,15 @@ public class Gamemanager : MonoBehaviour
     public float time;
     Text Timertext;
     Text Scoretext;
+
+    [EventRef] public string music;
+    FMOD.Studio.EventInstance Music;
    
     public GameObject replaycanvas;
     void Start()
     {
+        Music = FMODUnity.RuntimeManager.CreateInstance(music);
+        Music.start();
         InitLevel(time);
     }
     void FixedUpdate()
@@ -110,6 +116,7 @@ public class Gamemanager : MonoBehaviour
         if(!EndGame)
         {
             replaycanvas.SetActive(true);
+            Music.setParameterByName("Coal_Game", 1f);
             //BUG: somehow disables the buttons on the replay canvas!!!?
             //GameObject control = GameObject.Find("Canvas");
             //foreach(Transform a in control.transform)
@@ -120,5 +127,6 @@ public class Gamemanager : MonoBehaviour
             EndGame = true;
         }
     }
-   
+
+    //if playagain>>  Music.setParameterByName("Coal_Game", 0f);
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="ParameterPreset" id="{c4aa1d3b-d657-4da7-85e1-7e35847a5961}">
+		<property name="name">
+			<value>Coal_Volume</value>
+		</property>
+		<relationship name="folder">
+			<destination>{9fd94b45-10aa-4c56-966c-46340fab8f1e}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{760365d9-6de4-4753-b336-e169912f90f8}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{760365d9-6de4-4753-b336-e169912f90f8}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="seekSpeed">
+			<value>0.25</value>
+		</property>
+	</object>
+</objects>

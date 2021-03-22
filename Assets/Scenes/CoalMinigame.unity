@@ -1446,9 +1446,9 @@ MonoBehaviour:
   music: event:/Music
   replaycanvas: {fileID: 1609927904}
   hearts:
-  - {fileID: 77521691}
-  - {fileID: 1853424439}
   - {fileID: 492642736}
+  - {fileID: 1853424439}
+  - {fileID: 77521691}
   life: 3
 --- !u!4 &1538857438
 Transform:

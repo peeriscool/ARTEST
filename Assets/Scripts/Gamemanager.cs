@@ -69,25 +69,22 @@ public class Gamemanager : MonoBehaviour
         immune = true;
 
         life--;
-        if (life < 1 && life > 0)
+        if (life < 1)
         {
-            Destroy(hearts[0].gameObject);
-            //hearts[2].gameObject.GetComponent<Image>().enabled = false;
+            //Destroy(hearts[0].gameObject);
+            hearts[2].gameObject.GetComponent<Image>().enabled = false;
             gameEnded = true;
             Endgame();
-            //Destroy(hearts[0].gameObject);
         }
-        else if (life < 2 && life >= 1)
+        else if (life < 2 )
         {
-            Destroy(hearts[1].gameObject);
-            // hearts[1].gameObject.GetComponent<Image>().enabled = false;
-            //Destroy(hearts[1].gameObject);
+           // Destroy(hearts[1].gameObject);
+             hearts[1].gameObject.GetComponent<Image>().enabled = false;
         }
-        else if (life < 3 && life >= 2)
+        else if (life < 3 )
         {
-            Destroy(hearts[2].gameObject);
-            // hearts[0].gameObject.GetComponent<Image>().enabled = false;
-            //Destroy(hearts[2].gameObject);
+           //Destroy(hearts[2].gameObject);
+            hearts[0].gameObject.GetComponent<Image>().enabled = false;
         }
 
         StartCoroutine(TakeDamageC());

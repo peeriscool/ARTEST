@@ -134,6 +134,12 @@ MonoBehaviour:
   selected: 0
   clicked: 0
   SWIPE_THRESHOLD: 20
+  anim: {fileID: -5831805427308846183}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  life: 0
 --- !u!95 &-5831805427308846183
 Animator:
   serializedVersion: 3
@@ -144,7 +150,7 @@ Animator:
   m_GameObject: {fileID: 3386387505496759202}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ad541485f70495e4d858bf869468b146, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

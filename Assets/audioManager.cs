@@ -101,7 +101,7 @@ public class audioManager : MonoBehaviour
 
        /* if (GameObject.Find("Energybots_Wind", "Energybots_Bio", "Energybots_Coal", "Energybots_Nuclear", "Energybots_Solar") != null)
         {
-            playWind();
+            playCompleet();
             Debug.Log("we're here");
             //it exists
         }

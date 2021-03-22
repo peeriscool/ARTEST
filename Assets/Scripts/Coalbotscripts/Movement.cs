@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems; 
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
@@ -19,7 +20,10 @@ public class Movement : MonoBehaviour
     public int clicked;
     public float SWIPE_THRESHOLD = 20f;
 
- 
+    public Animator anim;
+
+   public GameObject[] hearts;
+    public int life;
 
     private void OnMouseDown()
     {
@@ -28,6 +32,7 @@ public class Movement : MonoBehaviour
     }
     private void Start()
     {
+        anim = GetComponent<Animator>();
         Speed = standardSpeed;
     }
    void Update()
@@ -42,6 +47,7 @@ public class Movement : MonoBehaviour
                 {
                     clicked = 0;
                 }
+                anim.Play("looking");
             }
         }
         if(Speed == clickSpeed)
@@ -178,6 +184,24 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Robot")
         {
+            life = life - 1;
+
+            if (life < 1)
+            {
+                hearts[2].gameObject.GetComponent<Image>().enabled = false;
+                //Destroy(hearts[0].gameObject);
+            }
+            else if (life < 2)
+            {
+                hearts[1].gameObject.GetComponent<Image>().enabled = false;
+                //Destroy(hearts[1].gameObject);
+            }
+            else if (life < 3)
+            {
+                hearts[0].gameObject.GetComponent<Image>().enabled = false;
+                //Destroy(hearts[2].gameObject);
+            }
+
             Destroy(this.gameObject);
             Destroy(collision.gameObject);
         }

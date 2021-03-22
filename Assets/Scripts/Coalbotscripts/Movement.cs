@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
                 {
                     clicked = 0;
                 }
-                anim.Play("looking");
+               // anim.Play("looking");
             }
         }
         if(Speed == clickSpeed)
@@ -182,7 +182,7 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Robot")
         {
-            CoalGameManager.Instance.TakeDamage();
+            Gamemanager.Instance.TakeDamage();
 
             Destroy(this.gameObject);
             Destroy(collision.gameObject);

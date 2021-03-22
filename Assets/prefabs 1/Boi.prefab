@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3386387505496759205}
   - component: {fileID: 3386387505496759204}
   - component: {fileID: 3386387505496759203}
-  - component: {fileID: -5831805427308846183}
   m_Layer: 0
   m_Name: Boi
   m_TagString: Robot
@@ -134,20 +133,15 @@ MonoBehaviour:
   selected: 0
   clicked: 0
   SWIPE_THRESHOLD: 20
-  anim: {fileID: -5831805427308846183}
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  life: 3
---- !u!95 &-5831805427308846183
+  anim: {fileID: 3626581762413439476}
+--- !u!95 &3626581762413439476
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3386387505496759202}
+  m_GameObject: {fileID: 4936043529822169820}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ad541485f70495e4d858bf869468b146, type: 2}
@@ -243,6 +237,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a5ea1e33dbe3824a89003148dd41813, type: 3}
+--- !u!1 &4936043529822169820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 6a5ea1e33dbe3824a89003148dd41813,
+    type: 3}
+  m_PrefabInstance: {fileID: 5206496115534813069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5749840930414407782 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6a5ea1e33dbe3824a89003148dd41813,

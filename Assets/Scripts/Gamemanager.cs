@@ -17,22 +17,40 @@ public class Gamemanager : MonoBehaviour
     FMOD.Studio.EventInstance Music;
    
     public GameObject replaycanvas;
+
+    public GameObject[] hearts;
+    public int life;
+
+    bool immune;
+    public static Gamemanager Instance
+    {
+        get;
+        private set;
+    }
+
     void Start()
     {
+        immune = false;
         Music = FMODUnity.RuntimeManager.CreateInstance(music);
         Music.start();
         InitLevel(time);
     }
-    void FixedUpdate()
+
+    void Awake()
+    {
+        Instance = this;
+    }
+
+   /* void FixedUpdate()
     {
         if (!gameEnded) { time -= 0.03f; };
         Timertext.text = time.ToString();
         Scoretext.text = calculatescore(Score);
         if (time <= 0)
         {
-            gameEnded = true;
+           *//* gameEnded = true;
             Timertext.text = "Times up!";
-            Endgame();
+            Endgame();*//*
         }
         if(gameEnded)
         {
@@ -41,6 +59,44 @@ public class Gamemanager : MonoBehaviour
           //  Score.Add(1.555555f);
           //  pointsystem.WriteToJson(Score);
         }
+    }*/
+    public void TakeDamage()
+    {
+        if (immune)
+        {
+            return;
+        }
+        immune = true;
+
+        life--;
+        if (life < 1 && life > 0)
+        {
+            Destroy(hearts[0].gameObject);
+            //hearts[2].gameObject.GetComponent<Image>().enabled = false;
+            gameEnded = true;
+            Endgame();
+            //Destroy(hearts[0].gameObject);
+        }
+        else if (life < 2 && life >= 1)
+        {
+            Destroy(hearts[1].gameObject);
+            // hearts[1].gameObject.GetComponent<Image>().enabled = false;
+            //Destroy(hearts[1].gameObject);
+        }
+        else if (life < 3 && life >= 2)
+        {
+            Destroy(hearts[2].gameObject);
+            // hearts[0].gameObject.GetComponent<Image>().enabled = false;
+            //Destroy(hearts[2].gameObject);
+        }
+
+        StartCoroutine(TakeDamageC());
+    }
+
+    IEnumerator TakeDamageC()
+    {
+        yield return new WaitForSeconds(0.2f);
+        immune = false;
     }
     void InitLevel(float levelTime)
     {

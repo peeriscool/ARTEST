@@ -18,6 +18,7 @@ public class Gamemanager : MonoBehaviour
 
     public GameObject[] hearts;
     public int life;
+    public Image HP;
 
     bool immune;
     public static Gamemanager Instance
@@ -66,22 +67,24 @@ public class Gamemanager : MonoBehaviour
         immune = true;
 
         life--;
-        if (life < 1)
+        if (life < 1)//heb 1 leven
         {
             //Destroy(hearts[0].gameObject);
-            hearts[2].gameObject.GetComponent<Image>().enabled = false;
+            hearts[2].gameObject.GetComponent<Image>().sprite = HP.sprite;
+
             gameEnded = true;
             Endgame();
         }
         else if (life < 2 )
         {
-           // Destroy(hearts[1].gameObject);
-             hearts[1].gameObject.GetComponent<Image>().enabled = false;
+            // Destroy(hearts[1].gameObject);
+            hearts[1].gameObject.GetComponent<Image>().sprite = HP.sprite;
         }
         else if (life < 3 )
         {
            //Destroy(hearts[2].gameObject);
-            hearts[0].gameObject.GetComponent<Image>().enabled = false;
+            //hearts[0].gameObject.GetComponent<Image>().enabled = false;
+            hearts[0].gameObject.GetComponent<Image>().sprite = HP.sprite;
         }
 
         StartCoroutine(TakeDamageC());

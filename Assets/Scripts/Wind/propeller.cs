@@ -55,7 +55,7 @@ public class propeller : MonoBehaviour
         {
             SnapshotFadeOut();
             Debug.Log("HIT");
-        
+            Gamemanager.Instance.TakeDamage();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

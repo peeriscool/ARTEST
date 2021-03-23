@@ -5,19 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StartMenu.unity
     guid: 6b0dba7dd8844744aa78e31d25c89ba8
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 60f19d55443c9404fa8b0ffee9d1674b
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SolarMiniGame.unity
     guid: 82b6932df906dec40bd4260ca4c69c95
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/WindMinigame.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/CoalMinigame.unity
     guid: 450d4db54e4e81344a2d56cf10a10398
   m_configObjects:

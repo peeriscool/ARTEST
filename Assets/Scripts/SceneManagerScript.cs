@@ -31,7 +31,12 @@ public class SceneManagerScript : MonoBehaviour
     {
         hide.enabled = false;
     }
-
+    public void StartGame(int load)
+    {
+        SceneManager.LoadScene(load, LoadSceneMode.Additive);
+       // Destroy(GameObject.Find("Main Camera"));
+        Destroy(GameObject.Find("firstcanvas"));
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

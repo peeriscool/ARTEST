@@ -38,4 +38,16 @@ public class birdMovement : MonoBehaviour
 
         rb.velocity = new Vector3(maxWalkSpeed, rb.velocity.y);
     }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Destroy(this.gameObject);
+            windGameManager.Instance.TakeDamage();
+            Debug.Log("HIT");
+            Gamemanager.Instance.TakeDamage();
+            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
 }

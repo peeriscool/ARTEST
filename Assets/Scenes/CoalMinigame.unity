@@ -581,7 +581,7 @@ RectTransform:
   m_Children:
   - {fileID: 668633106}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -910,7 +910,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -1442,7 +1442,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b79780db54e104e9ab0154a493118b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 60
   music: event:/Music
   replaycanvas: {fileID: 1609927904}
   hearts:
@@ -1462,7 +1461,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1609927903
 PrefabInstance:

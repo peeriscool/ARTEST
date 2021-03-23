@@ -379,6 +379,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &323998351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8992156552826079596, guid: 337ffac7db0e8d442b0134cfcc7f4188,
+    type: 3}
+  m_PrefabInstance: {fileID: 1092870200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &341691693 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 517aed62fc598244d8b7cebe2ecab177,
@@ -1474,6 +1480,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BirdAnim
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d5a053835e8520e4f818f1f0f2a45bd7,
+        type: 3}
+      propertyPath: m_TagString
+      value: bird
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5a053835e8520e4f818f1f0f2a45bd7, type: 3}
 --- !u!1 &956950586 stripped
@@ -1816,7 +1827,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 1092870200}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 323998351}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 638a8509ba7804e458adbbf92c438d11, type: 3}
@@ -1961,7 +1972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a1480e56535bd408197bc64db7c287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  replaycanvas: {fileID: 0}
+  replaycanvas: {fileID: 323998351}
   hearts:
   - {fileID: 9937943}
   - {fileID: 1884867521}
@@ -2899,12 +2910,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 667ea3cd15c0e8a4ca9fb59bb31dac5e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7610083
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 667ea3cd15c0e8a4ca9fb59bb31dac5e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.74
+      value: -1.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 667ea3cd15c0e8a4ca9fb59bb31dac5e,
         type: 3}
@@ -2996,7 +3007,7 @@ GameObject:
   - component: {fileID: 2098602696}
   m_Layer: 0
   m_Name: GEO_Windbot_Propellor (1)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

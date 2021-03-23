@@ -34,7 +34,7 @@ public class SceneManagerScript : MonoBehaviour
     public void StartGame(int load)
     {
         SceneManager.LoadScene(load, LoadSceneMode.Additive);
-       // Destroy(GameObject.Find("Main Camera"));
+       
         Destroy(GameObject.Find("firstcanvas"));
     }
     public void PlayGame()

@@ -49,7 +49,7 @@ public class propeller : MonoBehaviour
     {
         fadeoutSnapshot.TransitionTo(.5f);
     }
-    public void OnCollisionEnter(Collision collision)
+/*    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "bird")
         {
@@ -58,5 +58,5 @@ public class propeller : MonoBehaviour
             Gamemanager.Instance.TakeDamage();
            // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-    }
+    }*/
 }

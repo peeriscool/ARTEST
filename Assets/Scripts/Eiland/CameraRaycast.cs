@@ -31,15 +31,15 @@ public class CameraRaycast : MonoBehaviour
             {
                 if(hit.transform.name == "Energybots_Wind")
                 {
-                    levelselctions[1].enabled = true;
+                    levelselctions[0].enabled = true;
                 }
                 if (hit.transform.name == "Energybots_solarpanel")
                 {
-                    levelselctions[0].enabled = true;
+                    levelselctions[2].enabled = true;
                 }
                 if(hit.transform.name == "Energybots_Coal")
                 {
-                    levelselctions[2].enabled = true;
+                    levelselctions[1].enabled = true;
                 }
                 //else
                 //{ 

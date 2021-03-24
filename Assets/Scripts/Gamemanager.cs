@@ -97,7 +97,7 @@ public class Gamemanager : MonoBehaviour
     }
 
 
-    string calculatescore(List<float> list)
+    public string calculatescore(List<float> list)
     {
         float score = 0;
         foreach(float i in list)

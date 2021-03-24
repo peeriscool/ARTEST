@@ -33,4 +33,8 @@ public class botSpawner : MonoBehaviour
             }
         }
     }
+    public void EarnPoints()
+    {
+
+    }
 }

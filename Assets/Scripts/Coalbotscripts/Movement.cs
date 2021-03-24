@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-
-
+//using System;
 public class Movement : MonoBehaviour
 {
     // Update is called once per frame
@@ -19,7 +17,8 @@ public class Movement : MonoBehaviour
     public bool selected;
     public int clicked;
     public float SWIPE_THRESHOLD = 20f;
-
+    private int pointtime = 0;
+    private List<float> Points = new List<float>();
     public Animator anim;
 
 
@@ -33,25 +32,35 @@ public class Movement : MonoBehaviour
         anim = GetComponent<Animator>();
         Speed = standardSpeed;
     }
-   void Update()
+    private void FixedUpdate()
     {
-        if(clicked >= 2)
+        pointtime++;
+        if (pointtime > 60)
+        {
+            Points.Add(9);
+            //earned a point
+            // pointsystem.WriteToJson(Points);
+        }
+    }
+    void Update()
+    {
+        if (clicked >= 2)
         {
             selected = false;
             Speed = clickSpeed;
-            for(int i = 0; i < 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
-                if(i == 999)
+                if (i == 999)
                 {
                     clicked = 0;
                 }
-               // anim.Play("looking");
+                // anim.Play("looking");
             }
         }
-        if(Speed == clickSpeed)
+        if (Speed == clickSpeed)
         {
             timer += 1;
-            if(timer >= TimerCheck)
+            if (timer >= TimerCheck)
             {
                 Speed = standardSpeed;
                 timer = 0;
@@ -177,11 +186,18 @@ public class Movement : MonoBehaviour
         this.gameObject.transform.eulerAngles = new Vector3(this.gameObject.transform.eulerAngles.x, -180, this.gameObject.transform.eulerAngles.z);
     }
 
-   
+   // public delegate void RobotDied(object sender, EventArgs e);
+    
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Robot")
         {
+            pointsystem.SavePoints(Points);
+            //ScoreVisalizer myscore = new ScoreVisalizer();
+            //myscore.Eventtrigger +=  new RobotDied(myscore.Eventtrigger);
+            // += new RobotDied();
+           //this.RobotDied += new RobotDied(Eventtrigger);
             Gamemanager.Instance.TakeDamage();
 
             Destroy(this.gameObject);

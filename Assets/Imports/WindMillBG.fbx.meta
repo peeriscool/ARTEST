@@ -3,7 +3,22 @@ guid: 1e8f9c1a5075a6f4eab4ba10063262a1
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bruin
+    second: {fileID: 2100000, guid: 67d2a2cfbd77a0c42b4332d619e66ca0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroenGras
+    second: {fileID: 2100000, guid: cff3ae400d6baa442bc2db58c7f9c0b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GroenStruik
+    second: {fileID: 2100000, guid: 1cc55154000841d488c0902a6d50b8a8, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

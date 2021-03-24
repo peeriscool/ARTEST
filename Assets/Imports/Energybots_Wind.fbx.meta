@@ -3,7 +3,12 @@ guid: e7327958b79f4dd4194616666193798d
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Texture_Windbot
+    second: {fileID: 2100000, guid: 04929e094cb21cc42980a1684ae23f9a, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

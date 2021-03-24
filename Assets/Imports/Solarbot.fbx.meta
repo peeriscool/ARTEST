@@ -3,7 +3,32 @@ guid: c4191af1957016348805b052d2f00d5a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 694b38ee4d3e0b34c95497f877ae4f2f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: balue
+    second: {fileID: 2100000, guid: 517f34c6d4a8f8b48b1dd60936e5df84, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pink
+    second: {fileID: 2100000, guid: 640f67554f01ede479eefa116ff0042c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pink.001
+    second: {fileID: 2100000, guid: 47be1299c2434c24dbe7fbbb57ee4860, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: witte
+    second: {fileID: 2100000, guid: a6c0f89caf4e7bd4aa9f3023d45e4765, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

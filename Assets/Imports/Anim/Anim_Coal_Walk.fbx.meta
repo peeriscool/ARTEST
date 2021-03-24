@@ -6,7 +6,12 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Energybots_Coal_Coal_Texture
+    second: {fileID: 2100000, guid: dfbef403e482e32498c9f8bda4bc6808, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

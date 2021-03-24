@@ -11,7 +11,7 @@ public class SceneManagerScript : MonoBehaviour
 
     #endregion
 
-    public audioManager am;
+    
     void Start()
     {
         Inctance = this;
@@ -39,7 +39,6 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void PlayGame()
     {
-        am.playClick();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

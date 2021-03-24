@@ -55,31 +55,11 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637519041200000000
+  lastModified: 637520975011831473
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 842
-  Exists: 1
---- !u!114 &-2324760069344944377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Coal_Volume
-  m_EditorClassIdentifier: 
-  Name: Coal_Volume
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
   Exists: 1
 --- !u!114 &-1295425704571283432
 MonoBehaviour:
@@ -123,7 +103,7 @@ MonoBehaviour:
   - {fileID: 6992930386039257790}
   StringsBanks:
   - {fileID: -8513600078352429034}
-  stringsBankWriteTime: 637519041200000000
+  stringsBankWriteTime: 637520975011831473
   cacheVersion: 6
 --- !u!114 &5224736429001814420
 MonoBehaviour:
@@ -165,26 +145,6 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
---- !u!114 &6677786743050727314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Music/Coal_Game
-  m_EditorClassIdentifier: 
-  Name: Coal_Game
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 0
-    data2: 0
-  Exists: 1
 --- !u!114 &6992930386039257790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,7 +160,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637519041200000000
+  lastModified: 637520975011761452
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -244,8 +204,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 6677786743050727314}
-  - {fileID: -2324760069344944377}
+  - {fileID: 7921959441765790702}
+  - {fileID: -8943322476656576302}
   MinDistance: 0
   MaxDistance: 0
   Length: 207577

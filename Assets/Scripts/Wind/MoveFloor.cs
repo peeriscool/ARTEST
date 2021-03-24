@@ -16,7 +16,7 @@ public class MoveFloor : MonoBehaviour
     private void FixedUpdate()
     {
         //Moveable.GetComponent<Rigidbody>().AddForce(new Vector3(10, 0, 0), ForceMode.Acceleration);
-        Moveable.transform.position -= new Vector3(0.05f, 0, 0);
+        Moveable.transform.position -= new Vector3(0.1f, 0, 0);
         if(Moveable.transform.position.x < resetpos.x)
         {
             Moveable.transform.position = new Vector3(-166.7f, 0.6f, -0.7f);

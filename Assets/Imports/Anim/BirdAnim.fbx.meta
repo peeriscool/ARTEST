@@ -6,17 +6,7 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Geel
-    second: {fileID: 2100000, guid: 594aff89033581447a51e187e1defc3b, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Oranje
-    second: {fileID: 2100000, guid: 50320c767e00eb74f91702c7ae2f6998, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0

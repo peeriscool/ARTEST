@@ -10,8 +10,6 @@ public class audioManager : MonoBehaviour
     public AudioSource Hub_wind;
     public AudioSource Hub_nuclear;
     public AudioSource Hub_solar;
-    public AudioSource clickPlay;
-
 
    // public AudioManager am;
 
@@ -44,10 +42,6 @@ public class audioManager : MonoBehaviour
         Hub_nuclear.Play();
     }
 
-    public void playClick()
-    {
-        clickPlay.Play();
-    }
     // Start is called before the first frame update
     void Start()
     {

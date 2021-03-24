@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream:Assets/StreamingAssets.meta
 guid: e4b15fd4c52eefc4fba7116bf07abc95
+=======
+guid: fb03f6c6ec74be64dba12b1e1c10db6a
+>>>>>>> Stashed changes:Assets/eiland.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

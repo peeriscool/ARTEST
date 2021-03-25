@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 188907317}
   - component: {fileID: 188907321}
   - component: {fileID: 188907323}
-  - component: {fileID: 188907322}
   - component: {fileID: 188907324}
   m_Layer: 0
   m_Name: AR Camera
@@ -273,20 +272,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!114 &188907322
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 188907315}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bb9eafe03b9d364a81e9f36ae17468b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CameraOrigin: {fileID: 188907315}
-  objectprefab: {fileID: 0}
 --- !u!114 &188907323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,6 +383,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Energybots_Wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b9e56eb3fff70548a81aedba38656ff,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArClickable
       objectReference: {fileID: 0}
     - target: {fileID: 1724459579116287498, guid: 4b9e56eb3fff70548a81aedba38656ff,
         type: 3}
@@ -517,7 +507,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 13823fb4edca6e44481abc53baa825bf,
         type: 3}
       propertyPath: m_Name
-      value: Anim_Coal_Idle_LookingAround
+      value: Energybots_Coal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13823fb4edca6e44481abc53baa825bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArClickable
       objectReference: {fileID: 0}
     - target: {fileID: 3461275646997494643, guid: 13823fb4edca6e44481abc53baa825bf,
         type: 3}
@@ -744,8 +739,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.05506488, y: 0.082125366, z: 0.042433426}
+  m_Center: {x: -0.0063160905, y: 0.03721125, z: -0.00000002512187}
 --- !u!1001 &1131432326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,6 +832,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 2840823988043500203, guid: 0c91541302dccca4bb0c1c7593315188,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2840823989040583986, guid: 0c91541302dccca4bb0c1c7593315188,
         type: 3}
@@ -1482,6 +1482,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1687466030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687466027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.036904134, y: 0.07469324, z: 0.044729132}
+  m_Center: {x: -0.0076172655, y: 0.012653387, z: -0.027635457}
 --- !u!1001 &1703353252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1608,6 +1621,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6178766039569456157, guid: e4b2d9b45d1ac01419598d6860a5107c,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4b2d9b45d1ac01419598d6860a5107c, type: 3}

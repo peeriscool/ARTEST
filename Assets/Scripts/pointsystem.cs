@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public static class pointsystem
 {
-    private static List<List<float>> Levelscores; //save list of floats for each level
+    private static List<List<float>> Levelscores = new List<List<float>>(); //save list of floats for each level
     private static int leveltime; //sync level duration
 
     public static int Leveltime { get { return leveltime; } set { leveltime = value; } }

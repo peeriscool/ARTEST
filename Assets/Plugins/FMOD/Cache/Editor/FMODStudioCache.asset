@@ -55,7 +55,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637520975011831473
+  lastModified: 637519041200000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -121,6 +121,26 @@ MonoBehaviour:
     data1: 0
     data2: 0
   Exists: 1
+--- !u!114 &-787712559783194424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Coal_Game
+  m_EditorClassIdentifier: 
+  Name: Coal_Game
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +163,7 @@ MonoBehaviour:
   - {fileID: 6992930386039257790}
   StringsBanks:
   - {fileID: -8513600078352429034}
-  stringsBankWriteTime: 637520975011831473
+  stringsBankWriteTime: 637519041200000000
   cacheVersion: 6
 --- !u!114 &5224736429001814420
 MonoBehaviour:
@@ -240,7 +260,7 @@ MonoBehaviour:
   Path: Fmod Project/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637520975011761452
+  lastModified: 637519041200000000
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -257,6 +277,26 @@ MonoBehaviour:
   m_Name: parameter:/Music/Coal_Game
   m_EditorClassIdentifier: 
   Name: Coal_Game
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 0
+    data2: 0
+  Exists: 1
+--- !u!114 &7951865435510363329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Coal_Volume
+  m_EditorClassIdentifier: 
+  Name: Coal_Volume
   Min: 0
   Max: 1
   Default: 0
@@ -284,8 +324,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -6730352465828549004}
-  - {fileID: 6799735740016213335}
+  - {fileID: -787712559783194424}
+  - {fileID: 7951865435510363329}
   MinDistance: 0
   MaxDistance: 0
   Length: 207577

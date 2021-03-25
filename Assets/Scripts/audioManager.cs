@@ -12,8 +12,8 @@ public class audioManager : MonoBehaviour
     public AudioSource Hub_solar;
     public AudioSource clickPlay;
 
+   
 
-   // public AudioManager am;
 
     public void playBio()
     {
@@ -56,10 +56,7 @@ public class audioManager : MonoBehaviour
             playWind();
             Debug.Log("i'm here");
             //it exists
-        } else
-        {
-            Debug.Log("not here");
-        }
+        } 
 
         if (GameObject.Find("Energybots_Solar") != null)
         {
@@ -67,10 +64,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-        else
-        {
-            Debug.Log("not here");
-        }
+
 
         if (GameObject.Find("Energybots_Nuclear") != null)
         {
@@ -78,10 +72,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-        else
-        {
-            Debug.Log("not here");
-        }
+
 
         if (GameObject.Find("Energybots_Coal") != null)
         {
@@ -89,10 +80,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-        else
-        {
-            Debug.Log("not here");
-        }
+
 
         if (GameObject.Find("Energybots_Bio") != null)
         {
@@ -100,10 +88,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-        else
-        {
-            Debug.Log("not here");
-        }
+
 
        /* if (GameObject.Find("Energybots_Wind", "Energybots_Bio", "Energybots_Coal", "Energybots_Nuclear", "Energybots_Solar") != null)
         {

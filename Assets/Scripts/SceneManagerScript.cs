@@ -11,7 +11,6 @@ public class SceneManagerScript : MonoBehaviour
 
     #endregion
 
-    public audioManager am;
     void Start()
     {
         Inctance = this;
@@ -21,9 +20,22 @@ public class SceneManagerScript : MonoBehaviour
         //a.Add(420f);
         //a.Add(1.555555f);
         //pointsystem.WriteToJson(a);
+        
+        
+   
     }
 
-   public void LoadScene(int load)
+/*    private IEnumerator WaitAndPrint(float waitTime, int load)
+    {
+        while (true)
+        {
+            Debug.Log(waitTime);
+            yield return new WaitForSeconds(waitTime);
+            
+            print("WaitAndPrint " + Time.time);
+        }
+    }*/
+    public void LoadScene(int load)
     {
         SceneManager.LoadScene(load, LoadSceneMode.Single);
     }
@@ -34,12 +46,12 @@ public class SceneManagerScript : MonoBehaviour
     public void StartGame(int load)
     {
         SceneManager.LoadScene(load, LoadSceneMode.Additive);
-       
+       // StartCoroutine(WaitAndPrint(3, load));
         Destroy(GameObject.Find("firstcanvas"));
     }
     public void PlayGame()
     {
-        am.playClick();
+       
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

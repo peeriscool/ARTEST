@@ -43,7 +43,7 @@ public class windGameManager : MonoBehaviour
             Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Destroy(GameObject.Find("tutorialCanvas"));
-            print("WaitAndPrint " + Time.time);
+           // print("WaitAndPrint " + Time.time);
         }
     }
     /* void FixedUpdate()

@@ -10,12 +10,15 @@ public class ScoreVisalizer : MonoBehaviour
     public Gamemanager manager;
     Text score;
     int sceneindex;
+    float points;
    // event Movement.RobotDied robot;
     
     void Start()
     {
+        points = pointsystem.ReadToJson();
         score = GetComponent<Text>();
         sceneindex = SceneManager.GetActiveScene().buildIndex;
+        score.text = points.ToString();
     }
     //public void Eventtrigger()
     //{
@@ -29,7 +32,8 @@ public class ScoreVisalizer : MonoBehaviour
     }
     public void scoreToText(int i)
     {
-       List<float> Points  = pointsystem.Getlevelscore(i);
-        score.text = manager.calculatescore(Points);
+
+       //List<float> Points  = pointsystem.Getlevelscore(i);
+       // score.text = manager.calculatescore(Points);
     }
 }

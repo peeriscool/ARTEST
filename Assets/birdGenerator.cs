@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class birdGenerator : MonoBehaviour
 {
-    public GameObject objectToSpawn;
     public GameObject spawnPos;
+    public GameObject objectToSpawn;
     public bool stopSpawning;
     public float spawnTime;
     public float spawnDelay;
@@ -23,7 +23,7 @@ public class birdGenerator : MonoBehaviour
     {
         if (isBird)
         {
-            Instantiate(objectToSpawn, spawnPos.transform.position, transform.rotation);
+            Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x , spawnPos.transform.position.y, spawnPos.transform.position.z ), transform.rotation);
             spawnDelay = Random.Range(2, 10);
             if (stopSpawning)
             {
@@ -32,7 +32,7 @@ public class birdGenerator : MonoBehaviour
         }
         else
         {
-            Instantiate(objectToSpawn, new Vector2(spawnPos.transform.position.x, -0.8f), transform.rotation);
+            Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x + Random.Range(-2, 3), spawnPos.transform.position.y, spawnPos.transform.position.z + Random.Range(-2, 3)), transform.rotation);
             spawnDelay = Random.Range(2, 10);
             if (stopSpawning)
             {

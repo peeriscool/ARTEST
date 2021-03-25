@@ -30,6 +30,7 @@ public class Gamemanager : MonoBehaviour
     void Start()
     {
         immune = false;
+        StartCoroutine(WaitAndPrint(10));
         Music = FMODUnity.RuntimeManager.CreateInstance(music);
         Music.start();
     }
@@ -39,25 +40,35 @@ public class Gamemanager : MonoBehaviour
         Instance = this;
     }
 
-   /* void FixedUpdate()
+    /* void FixedUpdate()
+     {
+         if (!gameEnded) { time -= 0.03f; };
+         Timertext.text = time.ToString();
+         Scoretext.text = calculatescore(Score);
+         if (time <= 0)
+         {
+            *//* gameEnded = true;
+             Timertext.text = "Times up!";
+             Endgame();*//*
+         }
+         if(gameEnded)
+         {
+           //  Score.Add(69f);
+           //  Score.Add(420f);
+           //  Score.Add(1.555555f);
+           //  pointsystem.WriteToJson(Score);
+         }
+     }*/
+    private IEnumerator WaitAndPrint(float waitTime)
     {
-        if (!gameEnded) { time -= 0.03f; };
-        Timertext.text = time.ToString();
-        Scoretext.text = calculatescore(Score);
-        if (time <= 0)
+        while (true)
         {
-           *//* gameEnded = true;
-            Timertext.text = "Times up!";
-            Endgame();*//*
+            Debug.Log(waitTime);
+            yield return new WaitForSeconds(waitTime);
+            Destroy(GameObject.Find("tutorialCanvas"));
+            print("WaitAndPrint " + Time.time);
         }
-        if(gameEnded)
-        {
-          //  Score.Add(69f);
-          //  Score.Add(420f);
-          //  Score.Add(1.555555f);
-          //  pointsystem.WriteToJson(Score);
-        }
-    }*/
+    }
     public void TakeDamage()
     {
         if (immune)

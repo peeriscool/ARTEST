@@ -29,13 +29,23 @@ public class windGameManager : MonoBehaviour
     void Start()
     {
         immune = false;
+        StartCoroutine(WaitAndPrint(7));
     }
 
     void Awake()
     {
         Instance = this;
     }
-
+    private IEnumerator WaitAndPrint(float waitTime)
+    {
+        while (true)
+        {
+            Debug.Log(waitTime);
+            yield return new WaitForSeconds(waitTime);
+            Destroy(GameObject.Find("tutorialCanvas"));
+            print("WaitAndPrint " + Time.time);
+        }
+    }
     /* void FixedUpdate()
      {
          if (!gameEnded) { time -= 0.03f; };

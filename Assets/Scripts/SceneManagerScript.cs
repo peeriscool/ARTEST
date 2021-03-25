@@ -25,16 +25,6 @@ public class SceneManagerScript : MonoBehaviour
    
     }
 
-/*    private IEnumerator WaitAndPrint(float waitTime, int load)
-    {
-        while (true)
-        {
-            Debug.Log(waitTime);
-            yield return new WaitForSeconds(waitTime);
-            
-            print("WaitAndPrint " + Time.time);
-        }
-    }*/
     public void LoadScene(int load)
     {
         SceneManager.LoadScene(load, LoadSceneMode.Single);

@@ -124,7 +124,7 @@ public class windGameManager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            pointsystem.WriteToJson(Score);
+            Pointsystemtrytwo.WriteToJson(Score);
             EndGame = true;
         }
     }

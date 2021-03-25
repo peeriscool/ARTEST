@@ -617,6 +617,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63cce0906eee4d846a48d719865dacf9, type: 3}
+--- !u!1 &981243409 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2030748214012435756, guid: 63cce0906eee4d846a48d719865dacf9,
+    type: 3}
+  m_PrefabInstance: {fileID: 981243408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &981243410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981243409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b79780db54e104e9ab0154a493118b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: 
+  replaycanvas: {fileID: 0}
+  hearts: []
+  life: 0
+  HP: {fileID: 0}
 --- !u!1001 &1026027739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1634,6 +1657,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4b2d9b45d1ac01419598d6860a5107c, type: 3}
+--- !u!1 &1703353253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6178766039131899811, guid: e4b2d9b45d1ac01419598d6860a5107c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703353252}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1703353254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703353253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3eb8a2397ebf8249a122367c1b1190d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  points: []
 --- !u!1001 &1794389743
 PrefabInstance:
   m_ObjectHideFlags: 0

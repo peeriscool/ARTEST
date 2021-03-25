@@ -1552,7 +1552,7 @@ PrefabInstance:
     - target: {fileID: 5154533193020129778, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5295372286826295318, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
@@ -1753,7 +1753,7 @@ PrefabInstance:
     - target: {fileID: 8624411169601354789, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8932359412093561063, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
@@ -1947,6 +1947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1207673538}
+  jsonpath: /Wind.json
 --- !u!4 &1507498678 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 517aed62fc598244d8b7cebe2ecab177,

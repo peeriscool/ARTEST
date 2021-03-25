@@ -86,13 +86,13 @@ public class Gamemanager : MonoBehaviour
             //Destroy(hearts[0].gameObject);
             hearts[2].gameObject.GetComponent<Image>().sprite = HP.sprite;
              List <float> buffer = Pointsystemtrytwo.GetAllscore();
-            Pointsystemtrytwo.WriteToJson(buffer);
+            //Pointsystemtrytwo.WriteToJson(buffer);
             gameEnded = true;
            foreach(GameObject boi in GameObject.FindGameObjectsWithTag("Robot"))
             {
                 Destroy(boi);
             }
-            Pointsystemtrytwo.WriteToJson();
+            Pointsystemtrytwo.WriteToJson("/Leveldata.json"); //"/Wind.json"
             Endgame();
         }
         else if (life < 2 )
@@ -138,7 +138,7 @@ public class Gamemanager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            Pointsystemtrytwo.WriteToJson(Score);
+            //Pointsystemtrytwo.WriteToJson(Score);
             EndGame = true;
         }
     }

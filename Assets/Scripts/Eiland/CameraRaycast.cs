@@ -20,7 +20,7 @@ public class CameraRaycast : MonoBehaviour
     void Update()
     {
         // Debug.Log(origin.transform.position.ToString());
-       // Debug.DrawRay(origin.transform.position,Vector3.forward,Color.red);
+        // Debug.DrawRay(origin.transform.position,Vector3.forward,Color.red);
         RaycastHit hit;
         // Does the ray intersect any objects excluding the player layer
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))

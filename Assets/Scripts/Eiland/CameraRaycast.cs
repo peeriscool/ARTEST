@@ -26,7 +26,7 @@ public class CameraRaycast : MonoBehaviour
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity))
         {
             Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            Debug.Log("Did Hit");
+            //Debug.Log("Did Hit");
             if(hit.transform.tag == "ArClickable" )
             {
                 if(hit.transform.name == "Energybots_Wind")

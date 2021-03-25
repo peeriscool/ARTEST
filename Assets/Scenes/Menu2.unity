@@ -607,6 +607,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63cce0906eee4d846a48d719865dacf9, type: 3}
+--- !u!1 &1023871510 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2840823987959077109, guid: 0c91541302dccca4bb0c1c7593315188,
+    type: 3}
+  m_PrefabInstance: {fileID: 1266803023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1023871514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1023871510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3eb8a2397ebf8249a122367c1b1190d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1855645938}
 --- !u!1001 &1026027739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1091,7 +1110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351090272}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.076, y: -0.04, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 188907320}
@@ -1695,6 +1714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1855645937}
+  - component: {fileID: 1855645938}
   m_Layer: 0
   m_Name: Eiland
   m_TagString: Untagged
@@ -1722,6 +1742,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855645938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855645936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8b79780db54e104e9ab0154a493118b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: 
+  replaycanvas: {fileID: 0}
+  hearts: []
+  life: 0
+  HP: {fileID: 0}
 --- !u!1001 &1880361389
 PrefabInstance:
   m_ObjectHideFlags: 0

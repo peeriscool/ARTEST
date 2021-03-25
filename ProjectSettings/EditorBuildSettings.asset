@@ -8,10 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 6b0dba7dd8844744aa78e31d25c89ba8
+<<<<<<< Updated upstream
   - enabled: 1
     path: Assets/Scenes/Menu2.unity
     guid: e1c39985fa0d6c148ae921e44712d38f
   - enabled: 0
+=======
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+>>>>>>> Stashed changes
     path: Assets/Scenes/SolarMiniGame.unity
     guid: 82b6932df906dec40bd4260ca4c69c95
   - enabled: 1

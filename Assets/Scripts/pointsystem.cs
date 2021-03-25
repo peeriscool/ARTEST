@@ -31,11 +31,28 @@ public static class pointsystem
             Debug.Log(i);
             leveldata.data.Add(i);    
         }
-        string jsonfile = JsonUtility.ToJson(leveldata, true);
+        string jsonfile = JsonUtility.ToJson(leveldata);
         Debug.Log(leveldata);
         Debug.Log(Application.persistentDataPath);
         System.IO.File.WriteAllText(Application.persistentDataPath + "/Leveldata.json", jsonfile);
         
+    }
+    public static float ReadToJson()
+    {
+        Debug.Log(Application.persistentDataPath + "/Leveldata.json");
+        container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
+        float score = 0;
+        //foreach (float i in a.data)
+        //{
+           
+        //}
+        for (int i = 0; i < a.data.Count; i++)
+        {
+            score += a.data[(int)i];
+        }
+        Debug.Log(score);
+        return score;
+        //displayscore.text = "Energypoints: " + score.ToString();
     }
 }
 [SerializeField]
@@ -43,3 +60,38 @@ public class container
     {
     public List<float> data;
     }
+
+
+
+
+//ObjectMapper mapper = new ObjectMapper();
+//String json = "[{\"name\":\"mkyong\", \"age\":37}, {\"name\":\"fong\", \"age\":38}]";
+
+//try
+//{
+
+//    // 1. convert JSON array to Array objects
+//    Person[] pp1 = mapper.readValue(json, Person[].class);
+
+//System.out.println("JSON array to Array objects...");
+//for (Person person : pp1)
+//{
+//    System.out.println(person);
+//}
+
+//// 2. convert JSON array to List of objects
+//List<Person> ppl2 = Arrays.asList(mapper.readValue(json, Person[].class));
+
+//System.out.println("\nJSON array to List of objects");
+//ppl2.stream().forEach(x->System.out.println(x));
+
+//// 3. alternative
+//List<Person> pp3 = mapper.readValue(json, new TypeReference<List<Person>>() { });
+
+//System.out.println("\nAlternative...");
+//pp3.stream().forEach(x->System.out.println(x));
+
+//        } catch (IOException e)
+//{
+//    e.printStackTrace();
+//}

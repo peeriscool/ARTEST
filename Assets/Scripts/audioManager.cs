@@ -64,11 +64,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-<<<<<<< Updated upstream
 
-=======
- 
->>>>>>> Stashed changes
 
         if (GameObject.Find("Energybots_Nuclear") != null)
         {
@@ -76,11 +72,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-<<<<<<< Updated upstream
 
-=======
-    
->>>>>>> Stashed changes
 
         if (GameObject.Find("Energybots_Coal") != null)
         {
@@ -88,11 +80,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-<<<<<<< Updated upstream
 
-=======
-    
->>>>>>> Stashed changes
 
         if (GameObject.Find("Energybots_Bio") != null)
         {
@@ -100,11 +88,7 @@ public class audioManager : MonoBehaviour
             Debug.Log("i'm here");
             //it exists
         }
-<<<<<<< Updated upstream
 
-=======
-      
->>>>>>> Stashed changes
 
        /* if (GameObject.Find("Energybots_Wind", "Energybots_Bio", "Energybots_Coal", "Energybots_Nuclear", "Energybots_Solar") != null)
         {

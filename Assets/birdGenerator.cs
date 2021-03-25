@@ -24,7 +24,7 @@ public class birdGenerator : MonoBehaviour
         if (isBird)
         {
             Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x , spawnPos.transform.position.y, spawnPos.transform.position.z ), transform.rotation);
-            spawnDelay = Random.Range(2, 10);
+            spawnDelay = Random.Range(2, 6);
             if (stopSpawning)
             {
                 CancelInvoke("SpawnObject");
@@ -33,7 +33,7 @@ public class birdGenerator : MonoBehaviour
         else
         {
             Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x + Random.Range(-2, 3), spawnPos.transform.position.y, spawnPos.transform.position.z + Random.Range(-2, 3)), transform.rotation);
-            spawnDelay = Random.Range(2, 10);
+            spawnDelay = Random.Range(2, 6);
             if (stopSpawning)
             {
                 CancelInvoke("SpawnObject");

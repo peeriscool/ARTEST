@@ -44,7 +44,7 @@ public class birdMovement : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(this.gameObject);
-            windGameManager.Instance.TakeDamage();
+            //windGameManager.Instance.TakeDamage();
             Debug.Log("HIT");
             Gamemanager.Instance.TakeDamage();
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

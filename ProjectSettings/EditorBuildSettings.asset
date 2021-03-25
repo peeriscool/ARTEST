@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartMenu.unity
     guid: 6b0dba7dd8844744aa78e31d25c89ba8
   - enabled: 1
+    path: Assets/Scenes/Storyboard.unity
+    guid: c910d125ede7eba4b877414e1b128dcb
+  - enabled: 1
+    path: Assets/Scenes/Zoek.unity
+    guid: bd6710bec8f8dff4b88a44ead4d879c3
+  - enabled: 1
     path: Assets/Scenes/Menu2.unity
     guid: e1c39985fa0d6c148ae921e44712d38f
   - enabled: 0

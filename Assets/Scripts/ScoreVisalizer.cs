@@ -10,30 +10,39 @@ public class ScoreVisalizer : MonoBehaviour
     public Gamemanager manager;
     Text score;
     int sceneindex;
-    float points;
-   // event Movement.RobotDied robot;
-    
+   // public List<float> points;
+    public string jsonpath;
+    bool once = true;
+    // event Movement.RobotDied robot;
     void Start()
     {
-        points = pointsystem.ReadToJson();
-        score = GetComponent<Text>();
-        sceneindex = SceneManager.GetActiveScene().buildIndex;
-        score.text = points.ToString();
+        init();
+        activepoints();
     }
-    //public void Eventtrigger()
-    //{
-    //    EventArgs e = new EventArgs();
-    //    Debug.Log("Roboto collided");
-    //    robot(this, e);
-    //}
+    public void activepoints()
+    {
+        score.text = Pointsystemtrytwo.calculatescore(Pointsystemtrytwo.Levelscores);
+    }
     private void FixedUpdate()
     {
-        scoreToText(sceneindex);
+        activepoints();
+    }
+    private void init()
+    {
+        score = GetComponent<Text>();
+        sceneindex = SceneManager.GetActiveScene().buildIndex;
+        //scoreToText(sceneindex);
+        List<float> Points = Pointsystemtrytwo.getjson(jsonpath);
+        Debug.Log(Pointsystemtrytwo.calculatescore(Points));
+       // score.text = manager.calculatescore(Points);
+
     }
     public void scoreToText(int i)
     {
-
-       //List<float> Points  = pointsystem.Getlevelscore(i);
-       // score.text = manager.calculatescore(Points);
+        List<float> Points = Pointsystemtrytwo.getjson(jsonpath);
+        // List<float> Points  = pointsystem.Getlevelscore(i);
+        score.text = Pointsystemtrytwo.calculatescore(Points);
+       
     }
+   
 }

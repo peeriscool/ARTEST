@@ -46,7 +46,7 @@ public class birdMovement : MonoBehaviour
             Destroy(this.gameObject);
             windGameManager.Instance.TakeDamage();
             Debug.Log("HIT");
-            Gamemanager.Instance.TakeDamage();
+            //Gamemanager.Instance.TakeDamage();
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

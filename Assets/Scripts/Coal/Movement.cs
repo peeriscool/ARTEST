@@ -35,9 +35,10 @@ public class Movement : MonoBehaviour
     private void FixedUpdate()
     {
         pointtime++;
-        if (pointtime > 60)
+        if (pointtime > 120)
         {
-            Points.Add(9);
+            // Points.Add(1);
+            Pointsystemtrytwo.SavePoints(1);
             //earned a point
             // pointsystem.WriteToJson(Points);
         }
@@ -193,11 +194,12 @@ public class Movement : MonoBehaviour
     {
         if(collision.gameObject.tag == "Robot")
         {
-            pointsystem.SavePoints(Points);
+            Pointsystemtrytwo.SavePoints(-500);
+            // GameObject.Find("score").GetComponent<ScoreVisalizer>().points = Points;
             //ScoreVisalizer myscore = new ScoreVisalizer();
             //myscore.Eventtrigger +=  new RobotDied(myscore.Eventtrigger);
             // += new RobotDied();
-           //this.RobotDied += new RobotDied(Eventtrigger);
+            //this.RobotDied += new RobotDied(Eventtrigger);
             Gamemanager.Instance.TakeDamage();
 
             Destroy(this.gameObject);

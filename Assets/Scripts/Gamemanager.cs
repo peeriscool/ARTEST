@@ -8,6 +8,7 @@ public class Gamemanager : MonoBehaviour
 {
     bool gameEnded = false;
     bool EndGame = false;
+    bool startgame = false;
     public static List<float> Score = new List<float>();
     Text Scoretext;
 
@@ -29,8 +30,9 @@ public class Gamemanager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(Pointsystemtrytwo.calculatescore(Pointsystemtrytwo.Levelscores));
         immune = false;
-        StartCoroutine(WaitAndPrint(10));
+        StartCoroutine(WaitAndPrint(5));
         Music = FMODUnity.RuntimeManager.CreateInstance(music);
         Music.start();
     }
@@ -61,12 +63,13 @@ public class Gamemanager : MonoBehaviour
      }*/
     private IEnumerator WaitAndPrint(float waitTime)
     {
-        while (true)
+        while (!startgame)
         {
             Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Destroy(GameObject.Find("tutorialCanvas"));
             print("WaitAndPrint " + Time.time);
+            startgame = true;
         }
     }
     public void TakeDamage()
@@ -82,8 +85,14 @@ public class Gamemanager : MonoBehaviour
         {
             //Destroy(hearts[0].gameObject);
             hearts[2].gameObject.GetComponent<Image>().sprite = HP.sprite;
-
+             List <float> buffer = Pointsystemtrytwo.GetAllscore();
+            //Pointsystemtrytwo.WriteToJson(buffer);
             gameEnded = true;
+           foreach(GameObject boi in GameObject.FindGameObjectsWithTag("Robot"))
+            {
+                Destroy(boi);
+            }
+            Pointsystemtrytwo.WriteToJson("/Leveldata.json"); //"/Wind.json"
             Endgame();
         }
         else if (life < 2 )
@@ -129,7 +138,7 @@ public class Gamemanager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            pointsystem.WriteToJson(Score);
+            //Pointsystemtrytwo.WriteToJson(Score);
             EndGame = true;
         }
     }

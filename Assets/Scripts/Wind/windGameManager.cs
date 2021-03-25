@@ -31,7 +31,10 @@ public class windGameManager : MonoBehaviour
         immune = false;
         StartCoroutine(WaitAndPrint(7));
     }
-
+    private void FixedUpdate()
+    {
+        if (!gameEnded) { Pointsystemtrytwo.SavePoints(1); }
+    }
     void Awake()
     {
         Instance = this;
@@ -43,7 +46,7 @@ public class windGameManager : MonoBehaviour
             Debug.Log(waitTime);
             yield return new WaitForSeconds(waitTime);
             Destroy(GameObject.Find("tutorialCanvas"));
-            print("WaitAndPrint " + Time.time);
+           // print("WaitAndPrint " + Time.time);
         }
     }
     /* void FixedUpdate()
@@ -124,7 +127,7 @@ public class windGameManager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            pointsystem.WriteToJson(Score);
+            Pointsystemtrytwo.WriteToJson(Score, "/Wind.json");
             EndGame = true;
         }
     }

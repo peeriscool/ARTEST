@@ -20,9 +20,7 @@ public class SceneManagerScript : MonoBehaviour
         //a.Add(420f);
         //a.Add(1.555555f);
         //pointsystem.WriteToJson(a);
-        
-        
-   
+
     }
 
     public void LoadScene(int load)

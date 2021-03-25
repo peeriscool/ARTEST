@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class birdGenerator : MonoBehaviour
 {
-    public GameObject objectToSpawn;
     public GameObject spawnPos;
-    public bool stopSpawning;
+    public GameObject objectToSpawn;
+    bool stopSpawning;
     public float spawnTime;
     public float spawnDelay;
 
@@ -23,8 +23,8 @@ public class birdGenerator : MonoBehaviour
     {
         if (isBird)
         {
-            Instantiate(objectToSpawn, spawnPos.transform.position, transform.rotation);
-            spawnDelay = Random.Range(2, 10);
+            Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x , spawnPos.transform.position.y, spawnPos.transform.position.z ), transform.rotation);
+            spawnDelay = Random.Range(2, 6);
             if (stopSpawning)
             {
                 CancelInvoke("SpawnObject");
@@ -32,8 +32,9 @@ public class birdGenerator : MonoBehaviour
         }
         else
         {
-            Instantiate(objectToSpawn, new Vector2(spawnPos.transform.position.x, -0.8f), transform.rotation);
-            spawnDelay = Random.Range(2, 10);
+            GameObject bird = Instantiate(objectToSpawn, spawnPos.transform.position, transform.rotation);
+            bird.transform.position = new Vector3(transform.position.x + Random.Range(0, -10), transform.position.y, transform.position.z + Random.Range(0,-10));
+            spawnDelay = Random.Range(2, 6);
             if (stopSpawning)
             {
                 CancelInvoke("SpawnObject");
@@ -41,3 +42,33 @@ public class birdGenerator : MonoBehaviour
         }
     }
 }
+
+//public GameObject spawnPos;
+//public GameObject objectToSpawn;
+//bool stopSpawning;
+//public float spawnTime;
+//public float spawnDelay;
+
+//public bool isBird;
+
+//// Start is called before the first frame update
+//void Start()
+//{
+//    stopSpawning = false;
+//}
+
+//public void SpawnObject()
+//{
+//    if (isBird)
+//    {
+//        Instantiate(objectToSpawn, new Vector3(spawnPos.transform.position.x, spawnPos.transform.position.y, spawnPos.transform.position.z), transform.rotation);
+//        spawnDelay = Random.Range(2, 6);
+//    }
+//    else
+//    {
+//        GameObject bird = Instantiate(objectToSpawn, spawnPos.transform.position, transform.rotation);
+//        bird.transform.position = new Vector3(transform.position.x + Random.Range(-2, 5), transform.position.y, transform.position.z + Random.Range(-2, 5));
+//        spawnDelay = Random.Range(2, 6);
+
+//    }
+//}

@@ -31,7 +31,10 @@ public class windGameManager : MonoBehaviour
         immune = false;
         StartCoroutine(WaitAndPrint(7));
     }
-
+    private void FixedUpdate()
+    {
+        if (!gameEnded) { Pointsystemtrytwo.SavePoints(1); }
+    }
     void Awake()
     {
         Instance = this;
@@ -124,7 +127,7 @@ public class windGameManager : MonoBehaviour
             //{
             //    a.gameObject.SetActive(false);
             //}
-            Pointsystemtrytwo.WriteToJson(Score);
+            Pointsystemtrytwo.WriteToJson(Score, "/Wind.json");
             EndGame = true;
         }
     }

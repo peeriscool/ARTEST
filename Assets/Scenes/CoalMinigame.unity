@@ -552,7 +552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 1538857437}
-  points: []
+  jsonpath: /Leveldata.json
 --- !u!1 &303531892
 GameObject:
   m_ObjectHideFlags: 0
@@ -1823,7 +1823,7 @@ PrefabInstance:
     - target: {fileID: 5154533193020129778, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5295372286826295318, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
@@ -1989,7 +1989,7 @@ PrefabInstance:
     - target: {fileID: 8624411169601354789, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8932359412093561063, guid: 337ffac7db0e8d442b0134cfcc7f4188,
         type: 3}

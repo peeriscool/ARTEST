@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 [System.Serializable]
 public static class Pointsystemtrytwo
@@ -26,7 +27,7 @@ public static class Pointsystemtrytwo
     //    return Levelscores[sceneindex];
     //}
 
-    public static void WriteToJson(List<float> score)
+    public static void WriteToJson(List<float> score, string pathname)
     {
         container leveldata = new container();
         leveldata.data = new List<float>();
@@ -38,9 +39,9 @@ public static class Pointsystemtrytwo
         string jsonfile = JsonUtility.ToJson(leveldata);
         Debug.Log(leveldata);
         Debug.Log(Application.persistentDataPath);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/Leveldata.json", jsonfile);
+        System.IO.File.WriteAllText(Application.persistentDataPath + pathname, jsonfile);
     }
-    public static void WriteToJson()
+    public static void WriteToJson(string pathname)
     {
         container leveldata = new container();
         leveldata.data = new List<float>();
@@ -52,21 +53,31 @@ public static class Pointsystemtrytwo
         string jsonfile = JsonUtility.ToJson(leveldata);
         Debug.Log(leveldata);
         Debug.Log(Application.persistentDataPath);
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/Leveldata.json", jsonfile);
+        System.IO.File.WriteAllText(Application.persistentDataPath + pathname, jsonfile);
     }
-    public static List<float> getjson()
+    public static List<float> getjson(string pathname)
     {
-        container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
-        List<float> score = new List<float>();
-        //foreach (float i in a.data) { score += i; }
-        for (int i = 0; i < a.data.Count; i++)
-        {
-            //     Debug.Log(a.data[i]);
-            score.Add(a.data[i]);
-        }
 
+        if (File.Exists(Application.persistentDataPath + pathname))
+        {
+            container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + pathname));
+
+            List<float> score = new List<float>();
+            //foreach (float i in a.data) { score += i; }
+            for (int i = 0; i < a.data.Count; i++)
+            {
+                //     Debug.Log(a.data[i]);
+                score.Add(a.data[i]);
+            }
+            return score;
+        }
+        else
+        {
+            WriteToJson(pathname);
+            return new List<float>();
+        }
         //Debug.Log(calculatescore(score));
-        return score;
+      
         // displayscore.text = "Energypoints: " + score.ToString();
     }
     public static string calculatescore(List<float> list)

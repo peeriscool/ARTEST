@@ -10,7 +10,8 @@ public class ScoreVisalizer : MonoBehaviour
     public Gamemanager manager;
     Text score;
     int sceneindex;
-    public List<float> points;
+   // public List<float> points;
+    public string jsonpath;
     bool once = true;
     // event Movement.RobotDied robot;
     void Start()
@@ -30,14 +31,15 @@ public class ScoreVisalizer : MonoBehaviour
     {
         score = GetComponent<Text>();
         sceneindex = SceneManager.GetActiveScene().buildIndex;
-        scoreToText(sceneindex);
-        List<float> Points = Pointsystemtrytwo.getjson();
+        //scoreToText(sceneindex);
+        List<float> Points = Pointsystemtrytwo.getjson(jsonpath);
+        Debug.Log(Pointsystemtrytwo.calculatescore(Points));
        // score.text = manager.calculatescore(Points);
 
     }
     public void scoreToText(int i)
     {
-        List<float> Points = Pointsystemtrytwo.getjson();
+        List<float> Points = Pointsystemtrytwo.getjson(jsonpath);
         // List<float> Points  = pointsystem.Getlevelscore(i);
         score.text = Pointsystemtrytwo.calculatescore(Points);
        

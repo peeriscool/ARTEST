@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -399,6 +399,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Energybots_Wind
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 4b9e56eb3fff70548a81aedba38656ff,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArClickable
+      objectReference: {fileID: 0}
     - target: {fileID: 1724459579116287498, guid: 4b9e56eb3fff70548a81aedba38656ff,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -517,7 +522,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 13823fb4edca6e44481abc53baa825bf,
         type: 3}
       propertyPath: m_Name
-      value: Anim_Coal_Idle_LookingAround
+      value: Energybots_Coal
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 13823fb4edca6e44481abc53baa825bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: ArClickable
       objectReference: {fileID: 0}
     - target: {fileID: 3461275646997494643, guid: 13823fb4edca6e44481abc53baa825bf,
         type: 3}
@@ -744,8 +754,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.030987237, y: 0.11624209, z: 0.027265865}
+  m_Center: {x: -0.007605711, y: 0.008121042, z: -0.00012542879}
 --- !u!1001 &1131432326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1482,6 +1492,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1687466030
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687466027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.029013557, y: 0.1, z: 0.034690868}
+  m_Center: {x: -0.0018360071, y: 3.329536e-10, z: -0.0068352227}
 --- !u!1001 &1703353252
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public static class pointsystem
 {
-    private static List<List<float>> Levelscores; //save list of floats for each level
+    private static List<List<float>> Levelscores = new List<List<float>>(); //save list of floats for each level
     private static int leveltime; //sync level duration
 
     public static int Leveltime { get { return leveltime; } set { leveltime = value; } }
@@ -42,10 +42,6 @@ public static class pointsystem
         Debug.Log(Application.persistentDataPath + "/Leveldata.json");
         container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
         float score = 0;
-        //foreach (float i in a.data)
-        //{
-           
-        //}
         for (int i = 0; i < a.data.Count; i++)
         {
             score += a.data[(int)i];

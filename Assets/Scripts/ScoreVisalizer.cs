@@ -10,6 +10,7 @@ public class ScoreVisalizer : MonoBehaviour
     public Gamemanager manager;
     Text score;
     int sceneindex;
+    bool once = true;
    // event Movement.RobotDied robot;
     
     void Start()
@@ -25,11 +26,17 @@ public class ScoreVisalizer : MonoBehaviour
     //}
     private void FixedUpdate()
     {
-        scoreToText(sceneindex);
+        if(once)
+        {
+            scoreToText(sceneindex);
+            once = false;
+        }
+       
     }
     public void scoreToText(int i)
     {
-       List<float> Points  = pointsystem.Getlevelscore(i);
+        List<float> Points = pointsystem.getjson();
+      // List<float> Points  = pointsystem.Getlevelscore(i);
         score.text = manager.calculatescore(Points);
     }
 }

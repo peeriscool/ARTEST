@@ -37,6 +37,19 @@ public static class pointsystem
         System.IO.File.WriteAllText(Application.persistentDataPath + "/Leveldata.json", jsonfile);
         
     }
+    public static List<float> getjson()
+    {
+        container a = JsonUtility.FromJson<container>(System.IO.File.ReadAllText(Application.persistentDataPath + "/Leveldata.json"));
+        List<float> score = new List<float>();
+        //foreach (float i in a.data) { score += i; }
+        for (int i = 0; i < a.data.Count; i++)
+        {
+            score[i] += a.data[i];
+        }
+        Debug.Log(score);
+        return score;
+       // displayscore.text = "Energypoints: " + score.ToString();
+    }
 }
 [SerializeField]
 public class container
